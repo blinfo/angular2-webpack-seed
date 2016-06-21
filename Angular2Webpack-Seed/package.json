@@ -1,0 +1,40 @@
+{
+  "name": "angular2webpack-seed",
+  "version": "1.0.0",
+  "description": "angular2 seed with webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot",
+    "build": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "js",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.2",
+    "@angular/compiler": "2.0.0-rc.2",
+    "@angular/core": "2.0.0-rc.2",
+    "@angular/forms": "0.1.0",
+    "@angular/http": "2.0.0-rc.2",
+    "@angular/platform-browser": "2.0.0-rc.2",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.2",
+    "@angular/router": "3.0.0-alpha.7",
+    "@angular/router-deprecated": "2.0.0-rc.2",
+    "@angular/upgrade": "2.0.0-rc.2",
+    "angular2-in-memory-web-api": "0.0.12",
+    "bootstrap": "^3.3.6",
+    "core-js": "^2.4.0",
+    "es6-shim": "^0.35.1",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "ts-loader": "^0.8.2",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

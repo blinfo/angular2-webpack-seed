@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import  { Nav } from "./nav/nav.component";
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    directives: [Nav],
+    selector: "my-app",
+    template: "<my-nav>" +
+    "</my-nav><h1>Hello angular.io</h1>",
 })
 export class AppComponent {
-    
 }

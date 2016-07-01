@@ -7,6 +7,8 @@
       "public-before-private",
       "static-before-instance",
       "variables-before-functions"
-    ]
+    ],
+    "object-literal-sort-keys":false,
+    "quotemark":[true,"double","avoid-escape"]
   }
 }

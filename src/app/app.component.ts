@@ -1,10 +1,18 @@
 import { Component } from "@angular/core";
 import  { Nav } from "./nav/nav.component";
+import {  ROUTER_DIRECTIVES } from "@angular/router";
+
 @Component({
-    directives: [Nav],
+    directives: [ Nav , ROUTER_DIRECTIVES],
     selector: "my-app",
-    template: "<my-nav>" +
-    "</my-nav><h1>Hello angular.io</h1>",
+    template: `<h1>Angular Webpack Startkit</h1>
+    <nav>
+        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/about']">About</a>
+        <a [routerLink]="['/contact']">Contact Us</a>
+    </nav>
+    <router-outlet></router-outlet>
+    `,
 })
 export class AppComponent {
 }

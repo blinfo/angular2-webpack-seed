@@ -5,5 +5,9 @@ import "es6-shim";
 import { bootstrap }    from "@angular/platform-browser-dynamic";
 import { AppComponent } from "./app/app.component";
 import {  APP_ROUTER_PROVIDERS } from "./app/router/router.component";
+import { LocationStrategy, HashLocationStrategy } from "@angular/common"
 
-bootstrap(AppComponent, [ APP_ROUTER_PROVIDERS ]).catch(err => console.error(err));
+bootstrap(AppComponent, [
+    APP_ROUTER_PROVIDERS,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+]).catch(err => console.error(err));

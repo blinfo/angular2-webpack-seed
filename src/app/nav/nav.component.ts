@@ -1,18 +1,17 @@
 import {Component, ViewEncapsulation} from "@angular/core";
+import {  ROUTER_DIRECTIVES } from "@angular/router";
 @Component({
+    directives: [ Nav , ROUTER_DIRECTIVES],
     selector: "my-nav",
     encapsulation: ViewEncapsulation.None,
     template: `
   <header>
         <ul>
-            <li><a href="" [routerLink]="['/']"></a></li>
+        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/about']">About</a>
+        <a [routerLink]="['/contact']">Contact Us</a>
         </ul>
   </header>
-  <main>
-    <router-outlet></router-outlet>
-        <!-- the component's template will be inserted here-->
-  </main>
-  <footer><h1>Mr.js made with love</h1></footer>
 `,
 })
 export class Nav {

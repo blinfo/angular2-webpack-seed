@@ -3,10 +3,25 @@
   "version": "1.0.0",
   "description": "angular2 seed with webpack",
   "main": "index.js",
+  "config": {
+    "ghooks": {
+      "pre-commit": "opt --in pre-commit --exec \"npm run validate\""
+    }
+  },
   "scripts": {
-    "start": "webpack-dev-server --inline --hot",
-    "build": "webpack -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "validate": "npm-run-all --parallel validate-webpack:* lint",
+    "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
+    "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
+    "start": "webpack-dev-server --history-api-fallback --content-base dist --env.dev",
+    "build": "webpack -w --env.dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-dist": "rimraf dist",
+    "copy-files": "cpy \"**/index.html\" favicon.ico \"../dist\" --cwd=src --parents",
+    "clean-and-copy": "npm run clean-dist && npm run copy-files",
+    "prebuild": "npm run clean-and-copy",
+    "prebuild:prod": "npm run clean-and-copy",
+    "build:prod": "webpack --env.prod",
+    "lint": "tslint -c tslint.json src/**/*.ts"
   },
   "author": "js",
   "license": "ISC",
@@ -30,11 +45,18 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "cpy-cli": "^1.0.1",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
     "karma-chrome-launcher": "^1.0.1",
+    "npm-run-all": "^2.3.0",
     "ts-loader": "^0.8.2",
+    "tslint": "^3.13.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "2.1.0-beta.13",
+    "webpack-dev-server": "2.0.0-beta",
+    "webpack-node-externals": "^1.2.0",
+    "webpack-validator": "2.1.0"
   }
 }

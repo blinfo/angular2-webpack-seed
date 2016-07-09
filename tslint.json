@@ -9,6 +9,8 @@
       "variables-before-functions"
     ],
     "object-literal-sort-keys":false,
-    "quotemark":[true,"double","avoid-escape"]
+    "quotemark":[true,"double","avoid-escape"],
+    "no-unused-variable":false
+
   }
 }

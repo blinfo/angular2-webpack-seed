@@ -12,12 +12,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
              app: "./main.ts",
              vendor: ["./vendors.ts"]
          },
+         debug: true,
          output: {
              filename: "bundle.[hash].[name].js",
              path: resolve(__dirname, "dist"),
              pathinfo: !env.prod
          },
-         debug: true,
          devtool: this.prod ? 'source-map' : 'eval',
          stats: {
              colors: true,

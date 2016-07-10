@@ -1,13 +1,13 @@
-const { resolve } = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+var path = require("path");
+var webpack = require("webpack");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
  module.exports =  env =>  {
      const addPlugin = (add, plugin) => add ? plugin : undefined;
      const ifProd = plugin => addPlugin(env.prod, plugin);
      const removeEmpty = array => array.filter(i => !!i);
      return {
-         context: resolve(__dirname, "src"),
+         context: path.resolve(__dirname, "src"),
          entry: {
              app: "./main.ts",
              vendor: ["./vendors.ts"]
@@ -15,7 +15,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
          debug: true,
          output: {
              filename: "bundle.[hash].[name].js",
-             path: resolve(__dirname, "dist"),
+             path: path.resolve(__dirname, "dist"),
              pathinfo: !env.prod
          },
          devtool: this.prod ? 'source-map' : 'eval',

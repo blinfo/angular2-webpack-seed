@@ -12,7 +12,7 @@
     "validate": "npm-run-all --parallel validate-webpack:* lint",
     "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
     "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
-    "start": "webpack-dev-server --history-api-fallback --content-base dist --env.dev",
+    "start": "webpack-dev-server --history-api-fallback --env.dev",
     "build": "webpack -w --env.dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean-dist": "rimraf dist",
@@ -54,8 +54,8 @@
     "tslint": "^3.13.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
-    "webpack": "2.1.0-beta.13",
-    "webpack-dev-server": "2.0.0-beta",
+    "webpack": "^2.1.0-beta.1",
+    "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-node-externals": "^1.2.0",
     "webpack-validator": "2.1.0"
   }

@@ -2,7 +2,6 @@ import  { Nav } from "./nav/nav.component";
 import { Component } from "@angular/core";
 import {  ROUTER_DIRECTIVES } from "@angular/router";
 
-
 @Component({
     directives: [ Nav , ROUTER_DIRECTIVES],
     selector: "my-app",
@@ -12,9 +11,6 @@ import {  ROUTER_DIRECTIVES } from "@angular/router";
     <footer>Mr.JS</footer>
     `,
 })
-export class AppComponent{
-
-
+export class AppComponent {
 
 }
-

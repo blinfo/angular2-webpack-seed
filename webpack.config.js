@@ -35,11 +35,11 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
              // doesn"t save anything in this small app. npm@3 mostly takes care of this
              ifProd(new webpack.optimize.DedupePlugin()),
              // saves a couple of kBs
-             /*ifProd(new webpack.LoaderOptionsPlugin({
+             ifProd(new webpack.LoaderOptionsPlugin({
                  minimize: true,
                  debug: false,
                  quiet: true
-             })),*/
+             })),
              // saves 65 kB with Uglify!! Saves 38 kB without
              ifProd(new webpack.DefinePlugin({
                  "process.env": {

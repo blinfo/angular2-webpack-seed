@@ -8,13 +8,15 @@ import { Title } from "@angular/platform-browser";
 })
 export class About implements OnInit{
 
+    id: number;
+    name: string;
     ngOnInit() {
         console.log("App component loaded");
         this.titleService.setTitle( "about" );
     }
 
     public constructor(@Inject(Title) private titleService: Title ) {}
-
+    
     setTitle( newTitle: string) {
         this.titleService.setTitle( newTitle );
     }

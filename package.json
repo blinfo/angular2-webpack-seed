@@ -9,19 +9,22 @@
     }
   },
   "scripts": {
-    "validate": "npm-run-all --parallel validate-webpack:* lint",
+    "validate": "npm-run-all --parallel validate-webpack:* lint test",
     "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
     "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
     "start": "webpack-dev-server --history-api-fallback --env.dev",
     "build": "webpack -w --env.dev",
     "test": "karma start",
+    "watch:test": "npm test -- --auto-watch --no-single-run",
     "clean-dist": "rimraf dist",
     "copy-files": "cpy \"**/index.html\" favicon.ico \"../dist\" --cwd=src --parents",
     "clean-and-copy": "npm run clean-dist && npm run copy-files",
     "prebuild": "npm run clean-and-copy",
     "prebuild:prod": "npm run clean-and-copy",
     "build:prod": "webpack --env.prod",
-    "lint": "tslint -c tslint.json src/**/*.ts"
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "postinstall": "typings install",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
   },
   "author": "js",
   "license": "ISC",
@@ -45,13 +48,18 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "cpy-cli": "^1.0.1",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.22.0",
+    "istanbul-instrumenter-loader": "^0.2.0",
     "jasmine-core": "2.4.1",
     "json-loader": "^0.5.4",
     "karma": "^1.1.1",
     "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.0",
     "karma-jasmine": "^1.0.2",
+    "karma-webpack": "^1.7.0",
     "npm-run-all": "^2.3.0",
     "rimraf": "^2.5.3",
     "ts-loader": "^0.8.2",

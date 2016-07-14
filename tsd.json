@@ -3,7 +3,7 @@
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
   "path": "typings",
-  "bundle": "typings/tsd.d.ts",
+  "bundle": "./typings/tsd.d.ts",
   "installed": {
     "jasmine/jasmine.d.ts": {
       "commit": "de82425735f84a10b43921ae4b1d085b3752a626"

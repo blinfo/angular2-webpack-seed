@@ -27,11 +27,11 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
              extensions: ["", ".webpack.js", ".web.js", ".ts", ".js"]
          },
          module: {
-              preLoaders: [
+              postLoaders: [
                 // instrument only testing sources with Istanbul 
                 {
-                test: /\.(js|ts)$/, loader: 'istanbul-instrumenter-loader',
-                include: './src',
+                test: /\.ts$/, loader: 'istanbul-instrumenter-loader',
+                include: path.resolve('src/**/*.ts'),
                 exclude: [
                 /\.(e2e|spec)\.ts$/,
                 /node_modules/

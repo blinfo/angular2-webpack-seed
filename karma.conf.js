@@ -2,7 +2,7 @@
 // Generated on Tue Jun 28 2016 23:01:12 GMT+0200 (CEST)
 
 const webpackEnv = {test:true};
-const webpackConfig = require('./webpack.config')(webpackEnv)
+const webpackConfig = require('./webpack-test.config')(webpackEnv)
 const fileGlob = 'src/**/*.test.ts';
 
 module.exports = function(config) {
@@ -18,10 +18,7 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [    
-      "./node_modules/reflect-metadata/Reflect.js",  
-      fileGlob
-    ],
+    files:  [ { pattern: './spec-bundle.js', watched: false } ],
 
 
     // list of files to exclude
@@ -33,7 +30,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      [fileGlob]:['webpack']
+      './spec-bundle.js':['webpack','coverage', 'sourcemap']
     },
     webpack:webpackConfig,
     webpackMiddleware:{ noInfo : true },

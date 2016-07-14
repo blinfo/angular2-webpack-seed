@@ -4,14 +4,14 @@ require('core-js/es6');
 require('core-js/es7/reflect');
 
 // Typescript emit helpers polyfill
-require('ts-helpers');
+//require('ts-helpers');
 
-require('node_modules/zone.js/dist/zone');
-require('node_modules/zone.js/dist/long-stack-trace-zone');
-require('node_modules/zone.js/dist/jasmine-patch');
-require('node_modules/zone.js/dist/async-test');
-require('node_modules/zone.js/dist/fake-async-test');
-require('node_modules/zone.js/dist/sync-test');
+require('zone.js/dist/zone');
+require('./node_modules/zone.js/dist/long-stack-trace-zone');
+require('./node_modules/zone.js/dist/jasmine-patch');
+require('./node_modules/zone.js/dist/async-test');
+require('./node_modules/zone.js/dist/fake-async-test');
+require('./node_modules/zone.js/dist/sync-test');
 
 // RxJS
 require('rxjs/Rx');
@@ -33,7 +33,7 @@ testing.setBaseTestProviders(
  * any file that ends with spec.js and get its path. By passing in true
  * we say do this recursively
  */
-var testContext = require.context('../src', true, /\.test\.ts/);
+var testContext = require.context('./src', true, /\.test\.ts/);
 
 /*
  * get all the files, for each file, call the context function

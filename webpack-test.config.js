@@ -23,11 +23,11 @@ var webpack = require("webpack");
          },
          module: {
              preLoader:[
-                 {test: /\.ts$/, loader: 'source-map-loader', 
-                 exclude: [ './node_modules/rxjs','./node_modules/@angular' ]
-                }],
-              postLoaders: [
-                // instrument only testing sources with Istanbul 
+                 {
+                 test: /\.ts$/, loader: 'source-map-loader', 
+                 exclude: /node_modules/}],
+                postLoaders: [
+                   // instrument only testing sources with Istanbul 
                 {
                 test: /\.ts$/, loader: 'istanbul-instrumenter-loader',
                 include: path.resolve('src/app'),

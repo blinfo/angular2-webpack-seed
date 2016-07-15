@@ -20,3 +20,12 @@ Get all dependencies
     npm start 
 	 
  
+Run Test
+    npm t
+
+Run Test in watch mode
+    npm run watch:test
+
+Watch test coverage
+
+    npm run coverage

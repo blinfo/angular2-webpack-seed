@@ -2,47 +2,55 @@
 // Generated on Tue Jun 28 2016 23:01:12 GMT+0200 (CEST)
 
 const webpackEnv = {test:true};
-const webpackConfig = require('./webpack-test.config')(webpackEnv)
-const fileGlob = 'src/**/*.test.ts';
+const webpackConfig = require("./webpack-test.config")(webpackEnv)
+//! for excluding test files in code coverage
+const fileGlob = "src/app/**/*.!(test).ts";
+const testFiles = "src/app/**/*.test.ts";
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
-
+    basePath: "",
+autoWatchBatchDelay:1000,
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ["jasmine"],
 
 
     // list of files / patterns to load in the browser
-    files:  [ { pattern: './spec-bundle.js', watched: false } ],
+    files:  [
+      "./vendor-testfiles.js",    
+      fileGlob,
+      testFiles],
 
 
     // list of files to exclude
-    exclude: [
-      './node_modules'
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './spec-bundle.js':['webpack','coverage', 'sourcemap']
+      [fileGlob]:"webpack",
+     [testFiles]:"webpack",
+      "./spec-bundle.js":["webpack","coverage", "sourcemap"],
+      "./vendor-testfiles.js":"webpack"
     },
     webpack:webpackConfig,
     webpackMiddleware:{ noInfo : true },
     // test results reporter to use
-    // possible values: 'dots', 'progress'
+    // possible values: "dots", "progress"
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','coverage'],
-    coverageReporter:{
-      reports:[
-        {type:'icov',dir:'coverage/',subdir:'.'},
-        {type:'json',dir:'coverage/',subdir:'.'},
-        {type:'text-summary'}
+    reporters: ["progress","coverage"],
+ 
+    coverageReporter: {
+      dir : "coverage/",
+      reporters: [
+        { type: "text-summary" },
+        { type: "json" },
+        { type: "html" }
       ]
     },
 
@@ -65,7 +73,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ["Chrome"],
 
 
     // Continuous Integration mode

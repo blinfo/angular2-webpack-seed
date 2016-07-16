@@ -1,31 +1,3 @@
-#Angular2 Webpack Startkit 
+#Angular2 Webpack Seed 
 
- Clone project 
-`git clone repository`
-
-Get latest code
-  
-`git pull`
-
-Get all dependencies 
-
-    npm install
-
- Build application
-
-    npm run build
-
- Serve application to browser
-
-    npm start 
-	 
- 
-Run Test
-    npm t
-
-Run Test in watch mode
-    npm run watch:test
-
-Watch test coverage
-
-    npm run coverage
+![enter image description here](https://lh3.googleusercontent.com/-WkvjWLDgMNw/V4peyzSof6I/AAAAAAAAAFc/DPUcKs1NhCQ5-g_OpIhCsNzKGOu9dXRRQCLcB/s0/webpack%252Bangular.png "webpack+angular.png")

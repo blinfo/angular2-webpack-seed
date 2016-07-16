@@ -1,12 +1,12 @@
 {
   "extends": "tslint:latest",
   "rules": {
-    "interface-name": false,
+    "interface-name": [false],
     "max-line-length": [true, 140],
-    "member-ordering": false,
-    "object-literal-sort-keys":false,
+    "member-ordering": [false],
+    "object-literal-sort-keys":[true],
     "quotemark":[true,"double","avoid-escape"],
-    "no-unused-variable":false
-
+    "no-unused-variable":true,
+    "whitespace": [true]
   }
 }

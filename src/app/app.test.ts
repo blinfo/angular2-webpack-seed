@@ -1,3 +1,4 @@
+/* tslint:disable */
 import { AppComponent } from "./app.component";
 import { ContactComponent } from "./contact/contact.component";
 import { Title } from "@angular/platform-browser";

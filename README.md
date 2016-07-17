@@ -26,3 +26,11 @@ npm run build
 npm start
 
 ```
+**TODO**
+ 1. Production setup in webpack
+ 2. Development setup in webpack
+ 3. Webpack HMR
+ 4. Inject Angular DI to test
+ 5. Use Express for production
+ 6. Cover All component with test
+ 

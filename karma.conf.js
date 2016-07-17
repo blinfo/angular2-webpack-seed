@@ -21,7 +21,7 @@ autoWatchBatchDelay:1000,
 
     // list of files / patterns to load in the browser
     files:  [
-      "./vendor-testfiles.js",    
+      "./vendors.js",    
       fileGlob,
       testFiles],
 
@@ -36,7 +36,7 @@ autoWatchBatchDelay:1000,
       [fileGlob]:"webpack",
      [testFiles]:"webpack",
       "./spec-bundle.js":["webpack","coverage", "sourcemap"],
-      "./vendor-testfiles.js":"webpack"
+      "./vendors.js":"webpack"
     },
     webpack:webpackConfig,
     webpackMiddleware:{ noInfo : true },

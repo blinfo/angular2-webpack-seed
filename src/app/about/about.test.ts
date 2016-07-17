@@ -1,6 +1,5 @@
-import { About } from "./about.component";
+import { AboutComponent } from "./about.component";
 
-it('should behave...', () => {
-    expect(About).not.toBe(null);
+it("should behave...", () => {
+    expect(AboutComponent).not.toBe(null);
 });
-    

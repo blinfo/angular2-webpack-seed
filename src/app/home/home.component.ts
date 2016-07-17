@@ -2,11 +2,11 @@
  * Created by js on 2016-06-30.
  */
 import { HomeService } from "./home.service";
-import { Component , Inject, OnInit} from "@angular/core";
+import { Component , Inject, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
-
 @Component({
+     providers: [ HomeService  ],
     template: `
                 <h3>Heroes:</h3>
                 <ul>
@@ -14,19 +14,16 @@ import { Title } from "@angular/platform-browser";
                     {{hero.name}}
                   </li>
                 </ul>
-               `
-    ,
-    providers: [ HomeService  ]
-
+               `,
 })
 
-export class Home implements OnInit{
+export class HomeComponent implements OnInit {
 
    public errorMessage: string;
    public test: Test[];
 
    public ngOnInit() {
-        this.titleService.setTitle( "home" );
+        this.setTitle( "home" );
         this.getData();
     }
 
@@ -36,7 +33,6 @@ export class Home implements OnInit{
   private  setTitle( newTitle: string) {
         this.titleService.setTitle( newTitle );
     }
-
 
   private  getData () {
         return this.homeService.getHeroes().subscribe(

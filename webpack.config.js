@@ -70,11 +70,6 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
                  favicon:"favicon.ico",
                  minify:false
 
-             }),
-             new webpack.optimize.CommonsChunkPlugin({
-                 name:"common",
-                 filename:"bundle.common.js",
-                 chunks: ['app', 'vendor']
              })
          ])
      }

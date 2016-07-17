@@ -5,14 +5,14 @@
   "main": "index.js",
   "config": {
     "ghooks": {
-      "pre-commit": "opt --in pre-commit --exec \"npm run validate\""
+      "pre-commit": "npm run validate"
     }
   },
   "scripts": {
     "validate": "npm-run-all --parallel validate-webpack:* lint test",
     "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
     "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
-    "start": "webpack-dev-server --history-api-fallback --env.dev",
+    "start": "webpack-dev-server  --hot  --history-api-fallback --env.dev",
     "build": "webpack -w --env.dev",
     "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",

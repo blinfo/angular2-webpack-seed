@@ -6,7 +6,7 @@ import {  ROUTER_DIRECTIVES } from "@angular/router";
     directives: [ NavComponent , ROUTER_DIRECTIVES],
     selector: "sg-app",
     template: `<h1>Angular.io</h1>
-    <my-nav></my-nav>  
+    <sg-nav></sg-nav>  
     <router-outlet></router-outlet>
     <footer>Mr.JS</footer>
     `,

@@ -12,8 +12,8 @@
     "validate": "npm-run-all --parallel validate-webpack:* lint test",
     "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
     "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
-    "start": "webpack-dev-server  --hot  --history-api-fallback --env.dev",
-    "build": "webpack -w --env.dev",
+    "start": "NODE_ENV=production webpack-dev-server  --hot  --history-api-fallback --env.prod",
+    "build": "NODE_ENV=production webpack -w --env.dev",
     "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",
     "clean-dist": "rimraf dist",
@@ -24,7 +24,8 @@
     "build:prod": "webpack --env.prod",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "postinstall": "typings install",
-    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage",
+    "set":"NODE_ENV=production"
   },
   "author": "js",
   "license": "ISC",

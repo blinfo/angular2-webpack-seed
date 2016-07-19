@@ -70,8 +70,11 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
                  favicon:"favicon.ico",
                  minify:false
 
-             })
-         ])
+             }),
+              new webpack.DefinePlugin({
+                ON_PRODUCTION: process.env.NODE_ENV === '"production"'
+            })
+        ])
      }
     };
 

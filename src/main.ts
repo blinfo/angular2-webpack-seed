@@ -5,7 +5,10 @@ import { HTTP_PROVIDERS } from "@angular/http";
 import { Title } from "@angular/platform-browser";
 import { bootstrap }    from "@angular/platform-browser-dynamic";
 
-if ("<%= ENV %>" === "prod") { enableProdMode(); }
+/// <reference path="../typings/globals/node/index.d.ts" />
+
+
+if (process.env.NODE_ENV === "production") { enableProdMode(); }
 bootstrap(AppComponent, [
     APP_ROUTER_PROVIDERS,
     HTTP_PROVIDERS,

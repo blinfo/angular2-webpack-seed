@@ -7,7 +7,6 @@ import { bootstrap }    from "@angular/platform-browser-dynamic";
 
 /// <reference path="../typings/globals/node/index.d.ts" />
 
-
 if (process.env.NODE_ENV === "production") { enableProdMode(); }
 bootstrap(AppComponent, [
     APP_ROUTER_PROVIDERS,

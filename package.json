@@ -25,7 +25,7 @@
     "lint": "tslint -c tslint.json src/**/*.ts",
     "postinstall": "typings install",
     "coverage": "http-server -c-1 -o -p 9875 ./coverage",
-    "set":"NODE_ENV=production"
+    "set": "NODE_ENV=production"
   },
   "author": "js",
   "license": "ISC",
@@ -49,9 +49,12 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "bootstrap-css-only": "^3.3.6",
     "browser-sync": "^2.13.0",
     "codelyzer": "0.0.25",
     "cpy-cli": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
     "ghooks": "^1.3.2",
     "html-webpack-plugin": "^2.22.0",
     "istanbul-instrumenter-loader": "^0.2.0",
@@ -65,10 +68,12 @@
     "karma-webpack": "^1.7.0",
     "npm-run-all": "^2.3.0",
     "rimraf": "^2.5.3",
+    "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "tslint": "^3.13.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
+    "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.1",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-node-externals": "^1.2.0",

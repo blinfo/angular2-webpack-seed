@@ -21,7 +21,7 @@ autoWatchBatchDelay:1000,
 
     // list of files / patterns to load in the browser
     files:  [
-      "./vendors.js",    
+      "./karma-test-shim.js",    
       fileGlob,
       testFiles],
 
@@ -36,7 +36,7 @@ autoWatchBatchDelay:1000,
       [fileGlob]:"webpack",
      [testFiles]:"webpack",
       "./spec-bundle.js":["webpack","coverage", "sourcemap"],
-      "./vendors.js":"webpack"
+      "./karma-test-shim.js":"webpack"
     },
     webpack:webpackConfig,
     webpackMiddleware:{ noInfo : true },

@@ -5,7 +5,9 @@ var webpack = require("webpack");
      return {
          context: path.resolve(__dirname, "src"),
          entry: {
-             app: "./main.ts"
+             'polyfills': './polyfills.ts',
+            'vendors': './vendors.ts',
+            'app': './main.ts'
          },
          debug: true,
          output: {

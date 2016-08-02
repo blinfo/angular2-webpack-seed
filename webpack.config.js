@@ -9,8 +9,9 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
      return {
          context: path.resolve(__dirname, "src"),
          entry: {
-             app: "./main.ts",
-             vendor: ["./vendors.ts"]
+            'polyfills': './polyfills.ts',
+            'vendors': './vendors.ts',
+            'app': './main.ts'
          },
          debug: true,
          output: {
@@ -77,7 +78,10 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
                  favicon:"favicon.ico",
                  minify:false
 
-             })
+             }),
+              new webpack.optimize.CommonsChunkPlugin({
+                name: ['app', 'vendor', 'polyfills']
+             }), 
         ])
      }
     };

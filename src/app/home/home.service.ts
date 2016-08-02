@@ -1,16 +1,15 @@
 import { Test } from "./home.component";
 import { Injectable }     from "@angular/core";
-import { Inject } from "@angular/core";
 import { Http , Response  } from "@angular/http";
 import { Observable }     from "rxjs/Observable";
 
 @Injectable()
 export class HomeService {
-    public constructor(@Inject(Http)  private http: Http) {}
+    public constructor(private http: Http) {}
    public getHeroes (): Observable<Test []> {
         return this.http.get("./src/app/home/homm-data.json")
-            .map(this.extractData);
-            // .catch(this.handleError);
+            .map(this.extractData)
+             .catch(this.handleError);
     }
     public extractData(res: Response) {
         let body = res.json();

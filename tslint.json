@@ -29,6 +29,7 @@
     "pipe-naming": [true, "camelCase", "sg"],
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "import-destructuring-spacing": true
+    "import-destructuring-spacing": true,
+    "no-var-requires": false
   }
 }

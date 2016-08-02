@@ -2,13 +2,13 @@
  * Created by js on 2016-06-30.
  */
 import { HomeService } from "./home.service";
-import { Component , Inject, OnInit } from "@angular/core";
+import { Component , OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 
 @Component({
      providers: [ HomeService  ],
     template: `
-                <h3>Heroes:</h3>
+                <h3>Students:</h3>
                 <ul>
                   <li *ngFor="let hero of test">
                     {{hero.name}}
@@ -27,8 +27,7 @@ export class HomeComponent implements OnInit {
         this.getData();
     }
 
-    public constructor(@Inject(Title) private titleService: Title,
-                       @Inject(HomeService) private homeService: HomeService) {}
+    public constructor(private titleService: Title, private homeService: HomeService) {}
 
   private  setTitle( newTitle: string) {
         this.titleService.setTitle( newTitle );

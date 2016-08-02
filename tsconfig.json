@@ -10,7 +10,8 @@
     "allowJs": false,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules"

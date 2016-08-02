@@ -1,5 +1,8 @@
-import "core-js";
-import "es6-shim";
-import "reflect-metadata";
-import "zone.js/dist/zone";
-// this is a test comment 
+import "@angular/common";
+import "@angular/core";
+import "@angular/http";
+import "@angular/platform-browser";
+import "@angular/platform-browser-dynamic";
+import "@angular/router";
+// RxJS
+import "rxjs";

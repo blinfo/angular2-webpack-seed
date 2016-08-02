@@ -10,16 +10,7 @@ import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
 @Component({
     directives: [MD_CARD_DIRECTIVES],
     providers: [ HomeService  ],
-    template: `
-                <h3>Github Users:{{[].concat(users).length}} </h3>
-               
-                <ul>
-                  <li *ngFor="let user of users" style="list-style:none">                  
-                    <img class="col-lg-8" src="{{user.avatar_url}}" style="height:200px; width:250px;"/>
-                  </li>                  
-                </ul>
-                
-               `,
+    templateUrl: "./home.template.html",
 })
 
 export class HomeComponent implements OnInit {

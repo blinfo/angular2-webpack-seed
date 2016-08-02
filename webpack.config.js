@@ -51,6 +51,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
                  {test: /\.json$/, loader: "json-loader"}
              ]
          }, plugins: removeEmpty([
+             ifProd(new webpack.NoErrorsPlugin()),
              // doesn"t save anything in this small app. npm@3 mostly takes care of this
              ifProd(new webpack.optimize.DedupePlugin()),
              // saves a couple of kBs
@@ -66,12 +67,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
                  }
              })),
              // saves 711 kB!!
-             ifProd(new webpack.optimize.UglifyJsPlugin({
-                 compress: {
-                     screw_ie8: true, // eslint-disable-line
-                     warnings: false
-                 }
-             })),
+             ifProd(new webpack.optimize.UglifyJsPlugin()),
 
              new HtmlWebpackPlugin({
                  template: "./index.html",

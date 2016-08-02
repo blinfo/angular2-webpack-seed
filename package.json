@@ -12,7 +12,7 @@
     "validate": "npm-run-all --parallel validate-webpack:* lint test",
     "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
     "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
-    "start": "webpack-dev-server  --hot  --history-api-fallback --env.dev",
+    "start": "webpack-dev-server  --hot  --history-api-fallback --env.prod",
     "build": " webpack -w --env.dev",
     "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",

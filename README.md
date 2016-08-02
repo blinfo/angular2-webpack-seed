@@ -29,8 +29,10 @@ npm start
 **TODO**
  1. Production setup in webpack (done)
  2. Development setup in webpack (done)
- 3. Webpack HMR
+ 3. Webpack HMR(done)
  4. Inject Angular DI to test 
  5. Use Express for production
- 6. Cover All component with test
+ 6. Cover All component with test(done)
+ 7. set base webpack-common file for all perpuse 
+  
  

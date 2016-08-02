@@ -1,7 +1,6 @@
- <h3>Github Users:{{[].concat(users).length}} </h3>
-               
-                <ul>
-                  <li *ngFor="let user of users" style="list-style:none">                  
-                    <img class="col-lg-8" src="{{user.avatar_url}}" style="height:200px; width:250px;"/>
-                  </li>                  
-                </ul>
+<h3>Github Users:{{[].concat(users).length}} </h3>
+<ul>
+  <li *ngFor="let user of users" style="list-style:none">
+    <img class="col-lg-8" src="{{user.avatar_url}}" style="height:200px; width:250px;" />
+  </li>
+</ul>

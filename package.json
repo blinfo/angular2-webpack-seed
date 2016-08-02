@@ -15,7 +15,7 @@
     "start": "webpack-dev-server  --hot  --history-api-fallback --env.dev",
     "serve:prod": "webpack-dev-server  --hot  --history-api-fallback --env.prod",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "test": "karma start -W",
+    "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",
     "clean-dist": "rimraf dist",
     "copy-files": "cpy \"**/index.html\" favicon.ico app/home/homm-data.json \"../dist\" --cwd=src --parents",

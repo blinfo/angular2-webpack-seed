@@ -4,24 +4,27 @@
 import { HomeService } from "./home.service";
 import { Component , OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
+import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
+
 
 @Component({
-     providers: [ HomeService  ],
+    directives: [MD_CARD_DIRECTIVES],
+    providers: [ HomeService  ],
     template: `
-                <h3>Students:</h3>
+                <h3>Github Users:{{[].concat(users).length}} </h3>
+               
                 <ul>
-                  <li *ngFor="let hero of test">
-                    {{hero.name}}
-                  </li>
+                  <li *ngFor="let user of users" style="list-style:none">                  
+                    <img class="col-lg-8" src="{{user.avatar_url}}" style="height:200px; width:250px;"/>
+                  </li>                  
                 </ul>
+                
                `,
 })
 
 export class HomeComponent implements OnInit {
-
    public errorMessage: string;
-   public test: Test[];
-
+   public users: GitUser[];
    public ngOnInit() {
         this.setTitle( "home" );
         this.getData();
@@ -35,10 +38,13 @@ export class HomeComponent implements OnInit {
 
   private  getData () {
         return this.homeService.getHeroes().subscribe(
-            test => this.test = test,
+            users => this.users = users,
             error =>  this.errorMessage = <any>error);
     }
 }
-export class Test {
-    constructor(public id: string, public name: string) {}
+export class GitUser {
+   private avatar_url: string;
+   constructor(test: string) {
+    this.avatar_url = test;
+   }
 }

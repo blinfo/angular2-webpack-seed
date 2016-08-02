@@ -1,19 +1,21 @@
-import { Test } from "./home.component";
+import { GitUser } from "./home.component";
 import { Injectable }     from "@angular/core";
-import { Http , Response  } from "@angular/http";
+import { Headers, Http , RequestOptions, Response  } from "@angular/http";
 import { Observable }     from "rxjs/Observable";
 
 @Injectable()
 export class HomeService {
+    private headers = new Headers({"Authorization":"Basic am9yYXdhcnNpbmdoOndlZDU0anVsIQ=="});
+    private requestOptions = new RequestOptions({headers: this.headers});
     public constructor(private http: Http) {}
-   public getHeroes (): Observable<Test []> {
-        return this.http.get("./src/app/home/homm-data.json")
+   public getHeroes (): Observable<GitUser []> {
+        return this.http.get("https://api.github.com/users",this.requestOptions)
             .map(this.extractData)
              .catch(this.handleError);
     }
     public extractData(res: Response) {
         let body = res.json();
-        return body.data || { };
+        return body || { };
     }
     public handleError (error: any) {
         // In a real world app, we might use a remote logging infrastructure

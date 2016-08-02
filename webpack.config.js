@@ -1,4 +1,4 @@
-var path = require("path");
+/*var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -32,8 +32,8 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
                 // instrument only testing sources with Istanbul 
                 {
                 test: /\.ts$/, loader: 'istanbul-instrumenter-loader',
-                include: path.resolve('src/**/*.ts'),
-                exclude: [
+                include: path.resolve('src/**//*.ts'),
+              /*  exclude: [
                 /\.(e2e|spec)\.ts$/,
                 /node_modules/
                 ]
@@ -81,8 +81,11 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
         ])
      }
     };
+    */
 
 
+const validate = require('webpack-validator')
 
-
-
+module.exports = validate(require('./config/webpack.dev.js'), {
+    quiet: true
+  });

@@ -1,13 +1,12 @@
-/* tslint:disable */
 import { AppComponent } from "./app.component";
-import { ContactComponent } from "./contact/contact.component";
-import { Title } from "@angular/platform-browser";
-import { Component , OnInit, Inject} from "@angular/core";
+import { beforeEachProviders, describe, expect, inject , it } from "@angular/core/testing";
 
-it('should behave...', () => {
-    expect(AppComponent).not.toBe(null);       
-});  
- 
-it('should behave...', () => {
-    expect(ContactComponent).not.toBe(null);
+describe("App", () => {
+  beforeEachProviders(() => [
+    AppComponent,
+  ]);
+  it ("should work", inject([AppComponent], (app: AppComponent) => {
+    // Add real test here
+    expect(2).toBe(2);
+  }));
 });

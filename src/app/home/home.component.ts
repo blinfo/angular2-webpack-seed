@@ -15,7 +15,10 @@ import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
 
 export class HomeComponent implements OnInit {
    public errorMessage: string;
-   public users: GitUser[];
+   public users: any [];
+   private alert(): void {
+    return alert();
+    };
    public ngOnInit() {
         this.setTitle( "home" );
         this.getData();
@@ -32,10 +35,4 @@ export class HomeComponent implements OnInit {
             users => this.users = users,
             error =>  this.errorMessage = <any>error);
     }
-}
-export class GitUser {
-   private avatar_url: string;
-   constructor(test: string) {
-    this.avatar_url = test;
-   }
 }

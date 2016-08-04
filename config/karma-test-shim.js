@@ -8,7 +8,11 @@ require('zone.js/dist/long-stack-trace-zone');
 require('zone.js/dist/jasmine-patch');
 require('zone.js/dist/async-test');
 require('zone.js/dist/fake-async-test');
+/*
+const testFiles = require.context("../src",true,/\.test\.ts/);
 
+testFiles.keys().forEach(testFiles);
+*/
 var appContext = require.context('../src', true, /\.test\.ts/);
 
 appContext.keys().forEach(appContext);

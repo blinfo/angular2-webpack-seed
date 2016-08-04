@@ -1,4 +1,3 @@
-import { GitUser } from "./home.component";
 import { Injectable }     from "@angular/core";
 import { Headers, Http , RequestOptions, Response  } from "@angular/http";
 import { Observable }     from "rxjs/Observable";
@@ -8,7 +7,7 @@ export class HomeService {
     private headers = new Headers({"Authorization":"Basic am9yYXdhcnNpbmdoOndlZDU0anVsIQ=="});
     private requestOptions = new RequestOptions({headers: this.headers});
     public constructor(private http: Http) {}
-   public getHeroes (): Observable<GitUser []> {
+   public getHeroes (): Observable<any []> {
         return this.http.get("https://api.github.com/users",this.requestOptions)
             .map(this.extractData)
              .catch(this.handleError);

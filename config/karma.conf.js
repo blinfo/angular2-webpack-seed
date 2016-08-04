@@ -1,5 +1,4 @@
 var webpackConfig = require('./webpack.test');
-
 module.exports = function (config) {
   var _config = {
     basePath: '',
@@ -11,7 +10,7 @@ module.exports = function (config) {
     ],
 
     preprocessors: {
-      './config/karma-test-shim.js': ['webpack', 'sourcemap','coverage']
+    './config/karma-test-shim.js': ['webpack', 'sourcemap']
     },
 
     webpack: webpackConfig,
@@ -38,7 +37,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['Chrome','PhantomJS'],
+    browsers: ['PhantomJS'],
     singleRun: true
   };
 

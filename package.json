@@ -25,8 +25,7 @@
     "build:prod": "webpack --env.prod",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "postinstall": "typings install",
-    "coverage": "http-server -c-1 -o -p 9875 ./coverage",
-    "set": "NODE_ENV=production"
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
   },
   "author": "js",
   "license": "ISC",

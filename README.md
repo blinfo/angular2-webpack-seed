@@ -3,8 +3,23 @@
 
 #Angular2 Webpack Seed 
 
-![enter image description here](assets/webpack+angular.png "webpack+angular.png")
+![logo](assets/webpack+angular.png "webpack+angular.png")
 
+# Technologies
+ 1. Npm
+ 2. webpack
+ 3. webpack-dev-server
+ 4. bootstrap
+ 5. angular2-materual
+ 6. typescript
+ 7. karma
+ 8. jasmine
+ 9. code-coverage
+ 10. Typings
+ 
+
+#File Structure 
+![File structure](assets/filestructure.png "filestructure.png")
 
 ```bash
 # clone repo
@@ -19,6 +34,9 @@ npm install
 # validate the repo with tslint and test
 npm run validator
 
+# run test 
+npm test
+
 # build the repo
 npm run build
 
@@ -26,13 +44,36 @@ npm run build
 npm start
 
 ```
-**TODO**
- 1. Production setup in webpack (done)
- 2. Development setup in webpack (done)
- 3. Webpack HMR(done)
- 4. Inject Angular DI to test 
- 5. Use Express for production
- 6. Cover All component with test(done)
- 7. set base webpack-common file for all perpuse 
-  
+
+```bash
+list of all scripts
+"scripts": {
+    "validate": "npm-run-all --parallel validate-webpack:* lint test",
+    "validate-webpack:dev": "webpack-validator webpack.config.js --env.dev",
+    "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
+    "start": "webpack-dev-server  --hot  --history-api-fallback --env.dev",
+    "serve:prod": "webpack-dev-server  --hot  --history-api-fallback --env.prod",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "test": "karma start",
+    "watch:test": "npm test -- --auto-watch --no-single-run",
+    "clean-dist": "rimraf dist",
+    "copy-files": "cpy \"**/index.html\" favicon.ico app/home/homm-data.json \"../dist\" --cwd=src --parents",
+    "clean-and-copy": "npm run clean-dist && npm run copy-files",
+    "prebuild": "npm run clean-and-copy",
+    "prebuild:prod": "npm run clean-and-copy",
+    "build:prod": "webpack --env.prod",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "postinstall": "typings install",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
+  }
+```
+```bash
+for validating before commiting to git
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run validate"
+    }
+  }
+```
+
  

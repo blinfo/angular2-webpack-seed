@@ -6,6 +6,8 @@ import { Component , OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
 
+ // not working 
+
 
 @Component({
     directives: [MD_CARD_DIRECTIVES],
@@ -16,9 +18,7 @@ import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
 export class HomeComponent implements OnInit {
    public errorMessage: string;
    public users: any [];
-   private alert(): void {
-    return alert();
-    };
+
    public ngOnInit() {
         this.setTitle( "home" );
         this.getData();

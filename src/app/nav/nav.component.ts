@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
     template: `
                 <header class="container">
                         <ul>
-                        <a [routerLink]="['/']">Home</a>
+                        <a [routerLink]="['/']">Home</a>                  
                         <a [routerLink]="['/about']">About</a>
                         <a [routerLink]="['/contact']">Contact Us</a>
                         </ul>

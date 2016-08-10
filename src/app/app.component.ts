@@ -5,11 +5,7 @@ import {  ROUTER_DIRECTIVES } from "@angular/router";
 @Component({
     directives: [ NavComponent , ROUTER_DIRECTIVES],
     selector: "sg-app",
-    template: `<h1>Angular.io</h1>
-    <sg-nav></sg-nav>  
-    <router-outlet></router-outlet>
-    <footer>Mr.JS</footer>
-    `,
+    templateUrl: "./app.template.html",
 })
 export class AppComponent {
  public id: string = "fd";

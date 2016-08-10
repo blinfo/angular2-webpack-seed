@@ -4,12 +4,10 @@ import  { HomeComponent } from "../home/home.component";
 import { RouterConfig , provideRouter } from "@angular/router";
 
 export const routes: RouterConfig = [
-    { path: "",
-        redirectTo: "home",
-        terminal: true},
-    { component: HomeComponent, path: "" },
+    { component: HomeComponent, path: "" , pathMatch: "full"},
     { component: AboutComponent, path: "about" },
     { component: ContactComponent, path: "contact" },
+    { path: "**", redirectTo: "about"},
 ];
 
 export const APP_ROUTER_PROVIDERS = [

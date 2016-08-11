@@ -39,11 +39,6 @@ var helpers = require('./helpers');
              new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-            }),
+            })
         ]     
     };
-
-
-
-
-

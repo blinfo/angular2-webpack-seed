@@ -1,5 +1,3 @@
-import { AppComponent } from "./app.component";
-import {  inject } from "@angular/core/testing";
 /*
 describe("App", () => {
   beforeEachProviders(() => [

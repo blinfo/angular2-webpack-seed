@@ -7,8 +7,6 @@ import {  ROUTER_DIRECTIVES } from "@angular/router";
     selector: "sg-app",
     templateUrl: "./app.template.html",
 })
-
 export class AppComponent {
  public id: string = "fd";
 }
-

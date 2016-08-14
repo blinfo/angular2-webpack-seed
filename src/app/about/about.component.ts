@@ -10,7 +10,7 @@ import { Title } from "@angular/platform-browser";
 export class AboutComponent implements OnInit {
       public constructor(private titleService: Title) {}
    public ngOnInit() {
-       // console.log("App component loaded");
+        console.log("App component loaded");
         this.setTitle( "about" );
     }
 

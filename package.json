@@ -83,6 +83,7 @@
     "typings": "^1.0.4",
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.1",
+    "webpack-dashboard": "0.0.1-alpha.1",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-merge": "^0.14.1",
     "webpack-node-externals": "^1.2.0",

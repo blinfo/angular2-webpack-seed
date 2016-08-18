@@ -32,7 +32,7 @@ cd angular2-webpack-seed
 npm install
 
 # validate the repo with tslint and test
-npm run validator
+npm run validate
 
 # run test 
 npm test

@@ -1,14 +1,16 @@
-/*
-/*import { AppComponent } from "./app.component";
-import { beforeEachProviders, describe, expect, inject , it } from "@angular/core/testing";
-
+/* tslint:disable */ 
+import { AppModule } from "./app.module";
+import {  inject, TestBed  } from "@angular/core/testing";
+/// <reference path="../../typings/main/ambient/jasmine/index.d.ts" />
 describe("App", () => {
-  beforeEachProviders(() => [
-    AppComponent,
-  ]);
-  it ("should work", inject([AppComponent], (app: AppComponent) => {
+ TestBed.configureTestingModule({
+    providers: [ AppModule],
+  });
+  it("bla", function(){
+
+  })
+ it ("should work", inject([AppModule], (app: AppModule) => {
     // Add real test here
-    expect(2).toBe(2);
-  }));
+    expect(true).toBe(true);
+  }))
 });
-*/

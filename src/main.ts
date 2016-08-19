@@ -14,6 +14,11 @@ bootstrap(AppComponent, [
     Title,
 ]).catch(err => console.error(err));
 */
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
+
+
+import { AppModule } from "./app/app.module";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+/// <reference path="../typings/globals/node/index.d.ts" />
+
+
 platformBrowserDynamic().bootstrapModule(AppModule);

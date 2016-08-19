@@ -17,15 +17,25 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   htmlLoader: {
-    minimize: false // workaround for ng2
+    minimize: true // workaround for ng2
   },
 
   plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
+     new webpack.optimize.UglifyJsPlugin({
+            beautify: false,
+            comments: false,
+            compress: {
+                warnings: false,
+                drop_console: true
+            },
+            // Mangling specific options
+            mangle: false
+        }),
+   /* new webpack.optimize.UglifyJsPlugin({
         quite:true
-    }),
+    }),*/
     new ExtractTextPlugin('[name].[hash].css'),
     new webpack.DefinePlugin({
       'process.env': {

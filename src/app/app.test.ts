@@ -9,8 +9,8 @@ describe("App", () => {
   it("bla", function(){
 
   })
- it ("should work", inject([AppModule], (app: AppModule) => {
+ /*it ("should work", inject([AppModule], (app: AppModule) => {
     // Add real test here
     expect(true).toBe(true);
-  }))
+  }))*/
 });

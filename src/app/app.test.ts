@@ -1,16 +1,17 @@
-/* tslint:disable */ 
+import { AppComponent } from "./app.component";
 import { AppModule } from "./app.module";
-import {  inject, TestBed  } from "@angular/core/testing";
-/// <reference path="../../typings/main/ambient/jasmine/index.d.ts" />
-describe("App", () => {
- TestBed.configureTestingModule({
-    providers: [ AppModule],
-  });
-  it("bla", function(){
+import { addProviders, inject } from "@angular/core/testing";
 
-  })
- /*it ("should work", inject([AppModule], (app: AppModule) => {
-    // Add real test here
-    expect(true).toBe(true);
-  }))*/
+describe("App", () => {
+  // provide our implementations or mocks to the dependency injector
+  beforeEach(() => addProviders([
+    AppComponent,
+    AppModule,
+  ]));
+  it("should have a module", inject([ AppModule ], (app) => {
+    expect(app).toBeDefined();
+  }));
+  it("should have a component", inject([ AppComponent ], (app) => {
+    expect(app.id).toBeDefined();
+  }));
 });

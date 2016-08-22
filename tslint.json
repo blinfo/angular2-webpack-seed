@@ -7,7 +7,7 @@
     "interface-name": [false],
     "max-line-length": [true, 140],
     "member-ordering": [false],
-    "object-literal-sort-keys":[true],
+    "object-literal-sort-keys":true,
     "quotemark":[true,"double","avoid-escape"],
     "no-unused-variable":true,
     "whitespace": [true],

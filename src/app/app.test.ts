@@ -1,14 +1,17 @@
-/*
-/*import { AppComponent } from "./app.component";
-import { beforeEachProviders, describe, expect, inject , it } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import { AppModule } from "./app.module";
+import { addProviders, inject } from "@angular/core/testing";
 
 describe("App", () => {
-  beforeEachProviders(() => [
+  // provide our implementations or mocks to the dependency injector
+  beforeEach(() => addProviders([
     AppComponent,
-  ]);
-  it ("should work", inject([AppComponent], (app: AppComponent) => {
-    // Add real test here
-    expect(2).toBe(2);
+    AppModule,
+  ]));
+  it("should have a module", inject([ AppModule ], (app) => {
+    expect(app).toBeDefined();
+  }));
+  it("should have a component", inject([ AppComponent ], (app) => {
+    expect(app.id).toBeDefined();
   }));
 });
-*/

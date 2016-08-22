@@ -16,4 +16,6 @@ import { Title } from "@angular/platform-browser";
     Title,appRoutingProviders,
   ],
 })
-export class AppModule { }
+export class AppModule {
+  public id: string = "haha";
+ }

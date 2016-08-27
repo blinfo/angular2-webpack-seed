@@ -33,9 +33,6 @@ module.exports = webpackMerge(commonConfig, {
             // Mangling specific options
             mangle: false
         }),
-   /* new webpack.optimize.UglifyJsPlugin({
-        quite:true
-    }),*/
     new ExtractTextPlugin('[name].[hash].css'),
     new webpack.DefinePlugin({
       'process.env': {

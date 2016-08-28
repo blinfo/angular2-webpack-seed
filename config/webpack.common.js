@@ -24,7 +24,7 @@ var helpers = require('./helpers');
                   {test: /\.html$/, loader: 'html'},
                   {test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,loader : 'file-loader'},
                   {test: /\.json$/, loader: "json-loader"},
-                  {test: /\.css$/, include: helpers.root('src', 'app'), loader: 'raw'}
+                  //{test: /\.css$/, include: helpers.root('src', 'app'), loader: 'raw'}
              ]
          }, plugins: [          
              new HtmlWebpackPlugin({

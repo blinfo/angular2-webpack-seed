@@ -1,16 +1,1 @@
-<div class="col-lg-4">
-<h3>Github Users:{{[].concat(users).length}} </h3>
-<ul>
-  <li *ngFor="let user of users" style="list-style:none">
-   <button (click)="data = user" style="cursor:pointer"> <img  src="{{user.avatar_url}}" style="height:200px; width:250px;" /></button>
-  </li>
-</ul>
-</div>
-<md-card class="col-lg-8 " *ngIf="data" style="position:fixed; margin-left:22%; margin-top:3.5%">
-  <div class="col-lg-4">
-  <img  src="{{data.avatar_url}}" style="height:200px; width:250px;" />
-  </div>
-  <div class="col-lg-8">
-{{data | json}}
- </div>
-</md-card>
+<h1>Home</h1>

@@ -6,15 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
     directives: [ ROUTER_DIRECTIVES ],
     encapsulation: ViewEncapsulation.None,
     selector: "sg-nav",
-    template: `
-                <header class="container">
-                        <ul>
-                        <a [routerLink]="['/']">Home</a>                  
-                        <a [routerLink]="['/about']">About</a>
-                        <a [routerLink]="['/contact']">Contact Us</a>
-                        </ul>
-                </header>
-                `,
+    templateUrl: "nav.template.html",
 })
 export class NavComponent {
     public name: string = "MR.Js";

@@ -18,7 +18,7 @@
     "test": "karma start",
     "watch:test": "npm test -- --auto-watch --no-single-run",
     "clean-dist": "rimraf dist",
-    "copy-files": "cpy \"**/index.html\" favicon.ico app/home/homm-data.json \"../dist\" --cwd=src --parents",
+    "copy-files": "cpy \"**/index.html\" favicon.ico \"../dist\" --cwd=src --parents",
     "clean-and-copy": "npm run clean-dist && npm run copy-files",
     "prebuild": "npm run clean-and-copy",
     "prebuild:prod": "npm run clean-and-copy",

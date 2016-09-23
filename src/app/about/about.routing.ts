@@ -1,7 +1,7 @@
-import { Routes, RouterModule }   from '@angular/router';
-import {AboutComponent} from "./about.component";
+import { AboutComponent } from "./about.component";
+import { RouterModule, Routes }   from "@angular/router";
 const appRoutes: Routes = [
-  { path: 'about', component: AboutComponent }
+  { component: AboutComponent, path: "about"},
 ];
 
 export const appRoutingProviders: any[] = [

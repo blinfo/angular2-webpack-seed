@@ -1,19 +1,19 @@
-import { ContactComponent }       from './contact.component';
-import { routing, appRoutingProviders } from './contact.routing';
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { ContactComponent }       from "./contact.component";
+import { appRoutingProviders, routing } from "./contact.routing";
+import { NgModule }      from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    routing
-  ],
+  bootstrap: [ ContactComponent ],
   declarations: [
     ContactComponent,
   ],
-  providers: [
-    appRoutingProviders
+  imports: [
+    BrowserModule,
+    routing,
   ],
-  bootstrap: [ ContactComponent ]
+  providers: [
+    appRoutingProviders,
+  ],
 })
-export class ContactModule{}
+export class ContactModule {}

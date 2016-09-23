@@ -3,13 +3,13 @@
  */
 import { Component , OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
-import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
+// import { MD_CARD_DIRECTIVES } from "@angular2-material/card";
 
  // not working 
 
 
 @Component({
-    directives: [MD_CARD_DIRECTIVES],
+   // directives: [MD_CARD_DIRECTIVES],
     providers: [],
     templateUrl: "./home.template.html",
 })

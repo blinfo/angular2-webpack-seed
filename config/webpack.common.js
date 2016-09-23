@@ -11,7 +11,7 @@ var helpers = require('./helpers');
             'app': './src/main.ts'
          },                                  
          resolve: {
-             extensions: ["", ".ts", ".js"]
+             extensions: [".ts", ".js"]
          },
          module: {
              loaders: [

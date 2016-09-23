@@ -1,19 +1,19 @@
-import { AboutComponent }       from './about.component';
-import { routing, appRoutingProviders } from './about.routing';
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { AboutComponent }       from "./about.component";
+import { appRoutingProviders, routing } from "./about.routing";
+import { NgModule }      from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    routing
-  ],
+  bootstrap: [ AboutComponent ],
   declarations: [
     AboutComponent,
   ],
-  providers: [
-    appRoutingProviders
+  imports: [
+    BrowserModule,
+    routing,
   ],
-  bootstrap: [ AboutComponent ]
+  providers: [
+    appRoutingProviders,
+  ],
 })
-export class AboutModule{}
+export class AboutModule {}

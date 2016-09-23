@@ -16,4 +16,3 @@ describe("App", () => {
     expect(app.id).toBeDefined();
   }));
 });
-

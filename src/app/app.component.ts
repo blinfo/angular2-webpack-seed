@@ -1,5 +1,5 @@
 import { Component , ViewEncapsulation } from "@angular/core";
-
+import { NgForm } from "@angular/forms";
 @Component({
     // directives: [],
     encapsulation: ViewEncapsulation.None,
@@ -8,5 +8,9 @@ import { Component , ViewEncapsulation } from "@angular/core";
     templateUrl: "./app.template.html",
 })
 export class AppComponent {
- public id: string = "fd";
+ public  onSubmit(f: NgForm) {
+    console.log(f.value);  // { first: '', last: '' }
+    console.log(f.valid);  // false
+  }
+
 }

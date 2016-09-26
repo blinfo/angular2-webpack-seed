@@ -1,4 +1,13 @@
-<h1>Angular.io</h1>
-    <sg-nav></sg-nav>    
- <router-outlet></router-outlet>
+<h1>Angular.io learning form</h1>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input name="first" ngModel required #first="ngModel">
+      <input name="last" ngModel>
+      <button>Submit</button>
+    </form>
+    <p>First name value: {{ first.value }}</p>
+    <p>First name valid: {{ first.valid }}</p>
+    <p>Form value: {{ f.value | json }}</p>
+    <p>Form valid: {{ f.valid }}</p>
+   
 <footer class="footer">Mr.JS</footer>

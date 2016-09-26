@@ -9,8 +9,7 @@ import { NgForm } from "@angular/forms";
 })
 export class AppComponent {
  public  onSubmit(f: NgForm) {
-    console.log(f.value);  // { first: '', last: '' }
-    console.log(f.valid);  // false
-  }
+   // form
+ }
 
 }

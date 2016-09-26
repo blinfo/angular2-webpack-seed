@@ -4,7 +4,7 @@
 import { Component, Inject, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 @Component({
-    template: "<h1>Contact page</h1>",
+    templateUrl: "contact.template.html",
 })
 export class ContactComponent implements OnInit {
 

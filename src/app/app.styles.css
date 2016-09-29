@@ -7,3 +7,9 @@
   background-color: #efefef;
   text-align: center;
 }
+.ng-invalid{
+  border: 3px red solid;
+}
+.ng-valid{
+  border: 3px green solid; 
+}

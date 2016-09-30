@@ -10,6 +10,7 @@ import { NgForm } from "@angular/forms";
 })
 
 export class AppComponent  implements  AfterViewInit {
+  locations = ["Home","Away","ociens","western"]
   @ViewChild('formRef') form;
   public username = "Jorawar";
 

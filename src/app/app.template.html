@@ -41,4 +41,26 @@
        <input name="password" type="text" required ngModel>
        </fieldset>
        <button type="submit">Submit</button>
-   </form>   
+</form>   
+<hr size='3'>
+<h2>Radio buttons</h2>
+<form #radioFormRef>
+ <!-- <input type="radio" name="home" *ngFor='let location of locations'><label for="home">{{location}}</label>-->
+ <div *ngFor="let location of locations">
+   <input 
+   [attr.id]="location"
+   type="radio"
+   name="location"
+   ngModel
+   [value]="location">
+   <label [attr.for]="location">{{location}}</label>
+   </div> <!--hej-->
+  </form>  
+<hr size='3'>
+<h2>Select</h2>
+<form #selectFormRef>
+ <select name="location" [ngModel]="locations[0]" id="">
+   <option *ngFor="let location of locations"
+   [value]="location">{{location}}</option>
+ </select>
+  </form>  

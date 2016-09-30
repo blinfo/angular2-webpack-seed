@@ -13,3 +13,6 @@
 .ng-valid{
   border: 3px green solid; 
 }
+.ng-invalid + label:after {
+content: '<-- pick one'
+}

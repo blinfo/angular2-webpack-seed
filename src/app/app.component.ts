@@ -1,6 +1,8 @@
 /* tslint:disable */
-import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { Observable, Subject } from "rxjs/RX";
+
 @Component({
     // directives: [],
     encapsulation: ViewEncapsulation.None,
@@ -9,15 +11,10 @@ import { NgForm } from "@angular/forms";
     templateUrl: "./app.template.html",
 })
 
-export class AppComponent  implements  AfterViewInit {
-  locations = ["Home","Away","ociens","western"]
-  @ViewChild('formRef') form;
-  public username = "Jorawar";
-
- public  onSubmit(formValue) {
-   console.log(formValue);
- }
- ngAfterViewInit(){
-   this.form.valueChanges.subscribe(v => console.log(v));
+export class AppComponent {
+  click$ = new Subject();
+  clock;
+  constructor(){
+    this.clock = this.click$.map(() => new Date())
   }
 }

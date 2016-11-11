@@ -1,4 +1,4 @@
-[![GitHub version](https://badge.fury.io/gh/blinfo%2Fangular2-webpack-seed.svg)](https://badge.fury.io/gh/blinfo%2Fangular2-webpack-seed)
+[![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://badge.fury.io/js/%40angular%2Fcore)
 [![Dependency Status](https://david-dm.org/blinfo/angular2-webpack-seed.svg)](https://david-dm.org/angularclass/angular2-webpack-starter)
 
 #Angular2 Webpack Seed 
